@@ -1,0 +1,96 @@
+mixin promo()
+
+  -
+   citiesLink = [
+    {
+      href: "#",
+      text: "Москва"
+    },
+    {
+      href: "#",
+      text: "Санкт-Петербург"
+    },
+    {
+      href: "#",
+      text: "Новосибирск"
+    },
+    {
+      href: "#",
+      text: "Екатеринбург"
+    },
+    {
+      href: "#",
+      text: "Казань"
+    },
+    {
+      href: "#",
+      text: "Нижний Новгород"
+    },
+    {
+      href: "#",
+      text: "Челябинск"
+    },
+    {
+      href: "#",
+      text: "Самара"
+    },
+    {
+      href: "#",
+      text: "Уфа"
+    },
+    {
+      href: "#",
+      text: "Ростов-на-Дону"
+    },
+    {
+      href: "#",
+      text: "Омск"
+    },
+    {
+      href: "#",
+      text: "Красноярск"
+    },
+    {
+      href: "#",
+      text: "Воронеж"
+    },
+    {
+      href: "#",
+      text: "Пермь"
+    },
+    {
+      href: "#",
+      text: "Волгоград"
+    },
+    {
+      href: "#",
+      text: "Краснодар"
+    },
+    {
+      href: "#",
+      text: "Тюмень"
+    },
+    {
+      href: "#",
+      text: "Саратов"
+    },
+    {
+      href: "#",
+      text: "Тольятти"
+    },
+    {
+      href: "#",
+      text: "Ижевск"
+    },
+   ]
+
+  section.promo
+    .container
+      h1.promo__title Эвакуаторы России
+
+      p.promo__text Предоставляем актуальную информацию о службах эвакуации автомобилей во всех городах России.
+      p.promo__text Топ-20 крупных городов РФ по численности населения.
+      ul.promo__list
+        each link in citiesLink
+          li.promo__item
+            a.promo__link(href=link.href)!=link.text

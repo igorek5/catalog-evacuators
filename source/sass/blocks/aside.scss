@@ -1,0 +1,45 @@
+.aside__list {
+  position: sticky;
+  top: size(30px);
+
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include vp-1023 {
+    top: 30px;
+  }
+}
+
+.aside__list a {
+  display: block;
+  padding: size(5px);
+
+  font-weight: 600;
+  font-size: size(18px);
+  line-height: size(24px);
+  text-align: center;
+  color: $color-default-white;
+
+  background-color: $color-neon-blue;
+  border: size(2px) solid $color-default-black;
+  border-radius: size(5px);
+
+  @include vp-1023 {
+    padding: 5px;
+
+    font-size: 18px;
+    line-height: 24px;
+
+    border-width: 2px;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    background-color: $color-dark-brown;
+  }
+}

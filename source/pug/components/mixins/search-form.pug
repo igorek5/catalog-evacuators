@@ -1,0 +1,13 @@
+mixin search-form()
+
+  .search-form
+    form(action="#", method="GET")
+      +custom-input({
+        inputLabel: "Поиск по городам:",
+        inputName: "search",
+        inputMinLength: "2",
+        inputLabelClass: "search-form__label",
+      }).search-form__input
+
+      button.search-form__button(type="submit", aria-label="search")
+        +icon("icon-search", "12", "12")

@@ -1,0 +1,29 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Страница 2"
+      },
+      {
+        href: "#",
+        text: "Страница 3"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      if(currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href
+        span.header__logo.header__logo-index
+          +picture("content", "logo", "png", "300", "101", "Справочник эвакуаторов")
+      else
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +picture("content", "logo", "png", "300", "101", "Справочник эвакуаторов")
+
+      +search-form()
+      button.header__toggle(data-open-modal="menu" type="button", aria-label="Переключатель отображения меню", aria-pressed="false") Выбрать город

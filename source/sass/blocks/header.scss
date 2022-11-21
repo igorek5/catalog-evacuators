@@ -1,0 +1,45 @@
+.header {
+  padding: size(5px) 0 size(20px);
+
+  background-color: rgba($color-light-blue, 0.7);
+
+  @include vp-1023 {
+    padding: 5px 0 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: size(300px);
+
+    cursor: pointer;
+
+    transition: all $trans-default;
+
+    @include vp-1023 {
+      width: 300px;
+
+      margin-bottom: 25px;
+    }
+
+    @include hover-focus {
+      opacity: 0.6;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__logo-index {
+    pointer-events: none;
+  }
+}
