@@ -86,21 +86,37 @@
 }
 
 .promo__link {
+  padding: size(3px) size(20px);
+
   font-weight: 600;
   font-size: size(16px);
   line-height: size(24px);
   text-decoration: underline;
 
+  border-radius: size(10px);
+
+  transition: all $trans-default;
+
   @include vp-1023 {
+    padding: 3px 20px;
+
     font-size: 16px;
     line-height: 24px;
+
+    border-radius: 10px;
   }
   @include vp-767 {
     font-size: 15px;
     line-height: 22px;
+    padding: 3px 5px;
   }
   @include vp-374 {
     font-size: 14px;
     line-height: 22px;
+    padding: 0;
+    border-radius: 0;
+  }
+  @include hover-focus {
+    background-color: $color-light-yellow;
   }
 }

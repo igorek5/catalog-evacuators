@@ -1,13 +1,12 @@
 mixin search-form()
 
-  .search-form
-    form(action="#", method="GET")
+  .search-form(data-form-validate, data-callback="base", data-callback="extra")
+    form(method="GET")
       +custom-input({
         inputLabel: "Поиск по городам:",
         inputName: "search",
-        inputMinLength: "2",
         inputLabelClass: "search-form__label",
-      }).search-form__input
+      })(data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-limitation="cyrillic", data-required).search-form__input
 
       button.search-form__button(type="submit", aria-label="search")
         +icon("icon-search", "12", "12")

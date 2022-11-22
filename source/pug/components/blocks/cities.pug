@@ -27,6 +27,8 @@ mixin cities()
               li
                 a(href="#city-i", data-trigger="#city-i") И
               li
+                a(href="#city-j", data-trigger="#city-j") Й
+              li
                 a(href="#city-k", data-trigger="#city-k") К
               li
                 a(href="#city-l", data-trigger="#city-l") Л
@@ -63,7 +65,7 @@ mixin cities()
               li
                 a(href="#city-ja", data-trigger="#city-ja") Я
         .cities__block
-
+          +search-form()
           ul.cities__list
             li
               a(href="#") Абаза
@@ -239,6 +241,9 @@ mixin cities()
             li
               a(href="#") Ижевск
               span (Удмуртская Республика)
+            li
+              a(href="#") Йошкар-Ола
+              span (Республика Марий Эл)
             li
               a(href="#") Калач
               span (Воронежская Область)

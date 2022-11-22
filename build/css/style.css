@@ -1499,12 +1499,11 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .header__logo {
@@ -1521,6 +1520,22 @@ button,
 
 .header__logo-index {
   pointer-events: none;
+}
+
+.header__working-image {
+  width: 11.875rem;
+}
+
+.header__working-image img {
+  width: 100%;
+}
+
+.header__car-image {
+  width: 17.5rem;
+}
+
+.header__car-image img {
+  width: 100%;
 }
 
 .footer {
@@ -1660,10 +1675,15 @@ button,
 }
 
 .promo__link {
+  padding: 0.1875rem 1.25rem;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
   text-decoration: underline;
+  border-radius: 0.625rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .modal {
@@ -1789,7 +1809,6 @@ button,
 }
 
 .cities__title {
-  margin: 0 1.875rem;
   margin-bottom: 1.25rem;
   padding: 0;
   font-size: 1.875rem;
@@ -1830,17 +1849,27 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin: 0;
+  margin-bottom: 0.125rem;
   padding: 0;
   list-style: none;
 }
 
 .cities__list a {
   max-width: 50%;
+  padding: 0.1875rem 1.25rem;
+  border-radius: 0.625rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cities__list span {
   max-width: 50%;
+  text-align: right;
 }
 
 .cities__list b {
@@ -1880,13 +1909,17 @@ button,
   line-height: 1.5rem;
   text-align: center;
   color: #ffffff;
-  background-color: #2c39f2;
+  background-color: rgba(44, 57, 242, 0.9);
   border: 0.125rem solid #000000;
   border-radius: 0.3125rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.aside__list a:hover {
-  background-color: #47323B;
+.aside__list.disable a {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /* @mixin hover-focus {
@@ -1936,16 +1969,16 @@ button,
     padding: 5px 0 20px;
   }
 
-  .header .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .header__logo {
+    width: 280px;
   }
 
-  .header__logo {
-    width: 300px;
-    margin-bottom: 25px;
+  .header__working-image {
+    width: 160px;
+  }
+
+  .header__car-image {
+    width: 220px;
   }
 
   .search-form {
@@ -2001,8 +2034,10 @@ button,
   }
 
   .promo__link {
+    padding: 3px 20px;
     font-size: 16px;
     line-height: 24px;
+    border-radius: 10px;
   }
 
   .cities {
@@ -2012,7 +2047,6 @@ button,
 
   .cities__title {
     max-width: 520px;
-    margin: 0 30px;
     margin-bottom: 20px;
     font-size: 26px;
     line-height: 36px;
@@ -2028,6 +2062,15 @@ button,
     grid-column-gap: 50px;
     -ms-grid-columns: 150px 1fr;
     grid-template-columns: 150px 1fr;
+  }
+
+  .cities__list li {
+    margin-bottom: 2px;
+  }
+
+  .cities__list a {
+    padding: 3px 20px;
+    border-radius: 10px;
   }
 
   .cities__list b {
@@ -2059,6 +2102,19 @@ button,
     padding: 0 20px;
   }
 
+  .header__logo {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .header__working-image {
+    display: none;
+  }
+
+  .header__car-image {
+    display: none;
+  }
+
   .search-form {
     width: 100%;
   }
@@ -2076,6 +2132,7 @@ button,
   .promo__link {
     font-size: 15px;
     line-height: 22px;
+    padding: 3px 5px;
   }
 
   .modal__wrapper {
@@ -2094,12 +2151,35 @@ button,
   .cities {
     padding-top: 30px;
   }
+
+  .cities__wrapper {
+    grid-column-gap: 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .cities__list a {
+    left: 24px;
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+
+  .cities__list span {
+    left: 24px;
+    font-size: 14px;
+  }
+
+  .aside {
+    display: none;
+  }
 }
 
 @media (max-width: 374px) {
   .promo__link {
     font-size: 14px;
     line-height: 22px;
+    padding: 0;
+    border-radius: 0;
   }
 }
 
@@ -2112,5 +2192,20 @@ button,
   .btn:hover:not(.focus-visible),
   .btn.focus-visible:focus {
     opacity: 0.8;
+  }
+
+  .promo__link:hover:not(.focus-visible),
+  .promo__link.focus-visible:focus {
+    background-color: #FAC437;
+  }
+
+  .cities__list a:hover:not(.focus-visible),
+  .cities__list a.focus-visible:focus {
+    background-color: #FAC437;
+  }
+
+  .aside__list a:hover:not(.focus-visible),
+  .aside__list a.focus-visible:focus {
+    background-color: #47323B;
   }
 }

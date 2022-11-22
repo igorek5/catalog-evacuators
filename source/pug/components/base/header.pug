@@ -24,6 +24,8 @@ mixin header(headerMods, currentUrl)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +picture("content", "logo", "png", "300", "101", "Справочник эвакуаторов")
-
-      +search-form()
-      button.header__toggle(data-open-modal="menu" type="button", aria-label="Переключатель отображения меню", aria-pressed="false") Выбрать город
+      .header__working-image
+        +picture("content", "car-towingl", "png", "501", "344", "Работаем 24/7")
+      .header__car-image
+        +picture("content", "carw", "png", "967", "440", "Эвакуатор")
+      //button.header__toggle(data-open-modal="menu" type="button", aria-label="Переключатель отображения меню", aria-pressed="false") Выбрать город

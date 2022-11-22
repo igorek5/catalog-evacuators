@@ -212,21 +212,17 @@
             <picture>
               <source type="image/webp" srcset="img/content/logo.webp, img/content/logo@2x.webp 2x"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="300" height="101" alt="Справочник эвакуаторов">
             </picture></span>
-          <div class="search-form">
-            <form action="#" method="GET">
-              <div class="custom-input search-form__input">
-                <label><span class="custom-input__label search-form__label">Поиск по городам:</span>
-                  <input type="text" name="search" minlength="2">
-                </label>
-              </div>
-              <button class="search-form__button" type="submit" aria-label="search">
-                <svg width="12" height="12" aria-hidden="true">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </form>
+          <div class="header__working-image">
+            <picture>
+              <source type="image/webp" srcset="img/content/car-towingl.webp, img/content/car-towingl@2x.webp 2x"><img src="img/content/car-towingl.png" srcset="img/content/car-towingl@2x.png 2x" width="501" height="344" alt="Работаем 24/7">
+            </picture>
           </div>
-          <button class="header__toggle" data-open-modal="menu" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">Выбрать город</button>
+          <div class="header__car-image">
+            <picture>
+              <source type="image/webp" srcset="img/content/carw.webp, img/content/carw@2x.webp 2x"><img src="img/content/carw.png" srcset="img/content/carw@2x.png 2x" width="967" height="440" alt="Эвакуатор">
+            </picture>
+          </div>
+          <!--button.header__toggle(data-open-modal="menu" type="button", aria-label="Переключатель отображения меню", aria-pressed="false") Выбрать город-->
         </div>
       </header>
       <main>
@@ -275,6 +271,7 @@
                   <li><a href="#city-zh" data-trigger="#city-zh">Ж</a></li>
                   <li><a href="#city-z" data-trigger="#city-z">З</a></li>
                   <li><a href="#city-i" data-trigger="#city-i">И</a></li>
+                  <li><a href="#city-j" data-trigger="#city-j">Й</a></li>
                   <li><a href="#city-k" data-trigger="#city-k">К</a></li>
                   <li><a href="#city-l" data-trigger="#city-l">Л</a></li>
                   <li><a href="#city-m" data-trigger="#city-m">М</a></li>
@@ -296,6 +293,20 @@
                 </ul>
               </div>
               <div class="cities__block">
+                <div class="search-form" data-form-validate>
+                  <form method="GET">
+                    <div class="custom-input search-form__input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-matrix-limitation="cyrillic" data-required>
+                      <label><span class="custom-input__label search-form__label">Поиск по городам:</span>
+                        <input type="text" name="search">
+                      </label>
+                    </div>
+                    <button class="search-form__button" type="submit" aria-label="search">
+                      <svg width="12" height="12" aria-hidden="true">
+                        <use xlink:href="#icon-search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
                 <ul class="cities__list">
                   <li><a href="#">Абаза</a><span>(Хакасия Республика)</span></li>
                   <li><a href="#">Абинск</a><span>(Краснодарский Край)</span></li>
@@ -355,6 +366,7 @@
                   <li><a href="#">Ижевск</a><span>(Удмуртская Республика)</span></li>
                   <li><a href="#">Ижевск</a><span>(Удмуртская Республика)</span></li>
                   <li><a href="#">Ижевск</a><span>(Удмуртская Республика)</span></li>
+                  <li><a href="#">Йошкар-Ола</a><span>(Республика Марий Эл)</span></li>
                   <li><a href="#">Калач</a><span>(Воронежская Область)</span></li>
                   <li><a href="#">Калач</a><span>(Воронежская Область)</span></li>
                   <li><a href="#">Калач</a><span>(Воронежская Область)</span></li>

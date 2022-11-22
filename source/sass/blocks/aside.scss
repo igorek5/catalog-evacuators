@@ -1,3 +1,9 @@
+.aside {
+  @include vp-767 {
+    display: none;
+  }
+}
+
 .aside__list {
   position: sticky;
   top: size(30px);
@@ -9,7 +15,6 @@
   list-style: none;
 
   grid-template-columns: 1fr 1fr 1fr;
-
   @include vp-1023 {
     top: 30px;
   }
@@ -25,9 +30,11 @@
   text-align: center;
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: rgba($color-neon-blue, 0.9);
   border: size(2px) solid $color-default-black;
   border-radius: size(5px);
+
+  transition: all $trans-default;
 
   @include vp-1023 {
     padding: 5px;
@@ -38,8 +45,13 @@
     border-width: 2px;
     border-radius: 5px;
   }
-
-  &:hover {
+  @include hover-focus {
     background-color: $color-dark-brown;
   }
+}
+
+.aside__list.disable a {
+  opacity: 0.5;
+
+  pointer-events: none;
 }
