@@ -1946,15 +1946,6 @@ button,
   padding: 1.875rem 0;
 }
 
-.catalog__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1.875rem;
-  grid-row-gap: 1.875rem;
-}
-
 .catalog__title {
   margin: 0;
   margin-bottom: 1.25rem;
@@ -1976,6 +1967,7 @@ button,
 .card {
   display: -ms-grid;
   display: grid;
+  margin-bottom: 1.875rem;
   padding-bottom: 1.875rem;
   border-bottom: 0.0625rem solid #000000;
   grid-column-gap: 1.875rem;
@@ -1986,8 +1978,8 @@ button,
 }
 
 .card__image {
-  width: 18.75rem;
-  height: seze(225px);
+  width: 16.875rem;
+  height: 12.5rem;
 }
 
 .card__image img {
@@ -2249,11 +2241,6 @@ button,
     padding: 30px 0;
   }
 
-  .catalog__list {
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-  }
-
   .catalog__title {
     margin-bottom: 20px;
     font-size: 26px;
@@ -2267,14 +2254,15 @@ button,
   }
 
   .card {
+    margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #000000;
     grid-column-gap: 30px;
   }
 
   .card__image {
-    width: 300px;
-    height: 225px;
+    width: 270px;
+    height: 200px;
   }
 
   .card__title {
@@ -2380,6 +2368,36 @@ button,
 
   .aside {
     display: none;
+  }
+
+  .card {
+    padding-bottom: 10px;
+    grid-row-gap: 30px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .card__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .card__rating {
+    padding: 2px 6px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .card__item {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
