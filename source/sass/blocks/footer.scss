@@ -1,5 +1,22 @@
 .footer {
-  padding: 40px 0;
+  padding: size(60px) 0;
 
-  background-color: $color-neon-blue;
+  background-color: rgba($color-neon-blue, 0.6);
+
+  @include vp-1023 {
+    padding: 60px 0;
+  }
+}
+
+.footer__copyright {
+  margin: 0;
+  padding: 0;
+
+  font-size: size(16px);
+  line-height: size(24px);
+
+  @include vp-1023 {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

@@ -1,0 +1,23 @@
+mixin card()
+
+  article.card
+    .card__image
+      +picture("content", "cardxxx", "jpg", "300", "225", "Фото объявления")
+    .card__block
+      .card__header
+        h2.card__title АвтоБро911
+        span.card__rating 4,4
+      ul.card__list
+        li.card__item
+          +icon("icon-site", "20", "18")
+          a.card__link(href="https://xn--36-6kcai3c3aqqi0i.xn--p1ai/") эвакуатор36.рф
+        li.card__item
+          +icon("icon-phone", "20", "18")
+          a.card__link(aria-label="Номер телефона", href="tel:+749978468446") +7 (499) 784 684 46
+        li.card__item
+          +icon("icon-time", "20", "18")
+          span ежедневно, круглосуточно
+        li.card__item
+          +icon("icon-address", "20", "18")
+          span ул. 25 Января, 73А, Воронеж
+

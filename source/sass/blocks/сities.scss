@@ -99,9 +99,9 @@
   @include vp-767 {
     left: 24px;
 
-    font-size: 14px;
-
     padding: 3px 5px;
+
+    font-size: 14px;
   }
   @include hover-focus {
     background-color: $color-light-yellow;
@@ -127,6 +127,8 @@
   margin: size(10px) 0;
 
   font-size: size(18px);
+
+  user-select: none;
 
   @include vp-1023 {
     margin: 10px 0;

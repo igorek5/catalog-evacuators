@@ -2,11 +2,12 @@
   position: relative;
 
   width: size(400px);
+  margin-bottom: size(15px);
 
   @include vp-1023 {
     width: 600px;
+    margin-bottom: 15px;
   }
-
   @include vp-767 {
     width: 100%;
   }
@@ -15,6 +16,8 @@
 .search-form__input label {
   display: flex;
   flex-direction: column;
+
+  user-select: none;
 }
 
 .search-form__label {
