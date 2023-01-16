@@ -4,7 +4,6 @@ const alphabetArr = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'Й',
 const linksArr = document.querySelectorAll('.cities__list a');
 let counter = 0;
 
-
 export const initLinkMarkup = () => {
   linksArr.forEach((link) => {
     if (link.textContent[0] === alphabetArr[counter]) {
@@ -16,4 +15,3 @@ export const initLinkMarkup = () => {
     }
   });
 };
-
